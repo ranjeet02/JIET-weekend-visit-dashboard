@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JIET Form</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./home.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+  
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+    min-height:200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; 
+  }
+}
+.wrapper{
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  margin-left: 200px;
+  /* height: 50px; */
+  box-shadow: 0px 8px 16px 0px rgba(89, 86, 86, 0.803);
+}
+.wrapper .title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(-135deg,rgb(67, 101, 131),rgb(41, 84, 122));
+}
+.wrapper form{
+  padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+.wrapper form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+  border-color: #4158d0;
+}
+.wrapper form .field label{
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+form .content{
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .content input{
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+form .content label{
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+form .content .pass-link{
+  color: "";
+}
+form .field input[type="submit"]{
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(-135deg,rgb(66, 88, 107),rgb(41, 84, 122));
+  transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+  transform: scale(0.95);
+}
+form .signup-link{
+  color: #262626;
+  margin-top: 20px;
+  text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+  color: #4158d0;
+  text-decoration: none;
+}
+form .pass-link a:hover,
+form .signup-link a:hover{
+text-decoration: underline;
+}
+.foot{
+  background: rgb(201, 5, 5);
+  height: 370px;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse"  style="position:fixed; z-index: 1; width: 100%;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="./images/jietlogo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="./home.html">Home</a></li>
+            <li><a href="./contacts.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="./images/jiet0.jpeg" alt="Image">
+            <div class="carousel-caption">
+              <h1>Campus</h1>
+              <h2>JIET</h2>
+            </div>      
+          </div>
+    
+          <div class="item">
+            <img src="./images/jiet2.jpg" alt="Image">
+            <div class="carousel-caption">
+              <h1>Campus</h1>
+              <h2>JIET</h2>
+            </div>      
+          </div>
+        </div>
+    
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+        <div class="wrapper" style="margin-top: 30px; margin-left: 40%;">
+            <div class="title">Login Form</div>
+            <form action="#">
+              <div class="field">
+                <input type="text" required>
+                <label>Email Address</label>
+              </div>
+              <div class="field">
+                <input type="password" required>
+                <label>Password</label>
+              </div>
+            <div class="content">
+                <!-- <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+                </div> -->
+                <div class="pass-link"><a href="#">Forgot password?</a></div>
+            </div>
+              <div class="field">
+                <input type="submit" value="Login">
+              </div>
+              <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+            </form>
+          </div><br><br><br><br>
+</div>
+<footer class="foot">
+    <h1>JIET UNIVERSE</h1>
+
+<h3>JIET Universe, NH-62, Pali Road, Mogra, Jodhpur - 342802</h3>
+<h3>Mobile: 9001895774, 9799999186,  Phone No.: 0291-2868152 , 0291-2868153   Email: info@jietjodhpur.ac.in
+</h3>
+<h3>WhatsApp.: 9145998809</h3>
+<h3>JIET Happenings   Connect    Scholarships    Blog    Online Pay    Fees Structure    Career    Privacy Policy   Terms & Conditions
+
+  Engineering    Management    Hotel Management    Design & Technology    Nursing</h3>
+</footer>
+</body>
+</html>
